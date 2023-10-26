@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.sunbeam.Program01_&apos; to &apos;Program01&apos;&#x0A;- Original project: &apos;assign1q2&apos;&#x0A;- Original element: &apos;com.sunbeam.Program01_&apos;&#x0A;- Renamed element: &apos;com.sunbeam.Program01&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Program01_&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.sunbeam{Program01_.java[Program01_" matchStrategy="1" name="Program01" qualified="false" references="true" similarDeclarations="false" stamp="1698316195070" textual="false" version="1.0"/>
+</session>
