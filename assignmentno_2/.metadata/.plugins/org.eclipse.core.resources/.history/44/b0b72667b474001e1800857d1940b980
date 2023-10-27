@@ -1,0 +1,35 @@
+package com.sunbeam;
+
+import java.util.Arrays;
+
+public class InsertionSort {
+	public static int insertionSort(int arr[]) 
+	{
+		int count=0;
+		for(int i=1;i<arr.length;i++)
+		{
+			
+				int temp = arr[i];
+				int j =i-1;
+				while(j>=0 && arr[j]>temp)
+				{
+					arr[i]= arr[j];
+					count++;
+					j--;
+				}
+				arr[j]=temp;		
+		}
+		
+		return count;
+		
+	}
+
+	public static void main(String[] args) {
+		int []arr = {11,56,46,89,45,1,56,24,23};
+		int count = insertionSort(arr);
+		System.out.println("The count of comparison is"+ count);
+		System.out.println(Arrays.toString(arr));
+
+	}
+
+}
