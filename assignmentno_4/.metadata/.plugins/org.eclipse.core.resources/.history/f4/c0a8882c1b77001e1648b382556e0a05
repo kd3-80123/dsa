@@ -1,0 +1,57 @@
+package com.sunbeam;
+
+public class LinkListWithTail {
+	public class Node{
+		private int data;
+		private Node next;
+		public Node(int value)
+		{
+			data = value;
+			next =null;
+		}
+
+	}
+	private Node head;
+	private Node tail;
+	
+	public LinkListWithTail()
+	{
+		head = null;
+		tail= null;
+	}
+	public boolean isEmpty()
+	{
+		return head==null;
+	}
+	
+	public void addFirst(int data)
+
+	{
+		Node newnode = new Node(data);
+		if(isEmpty())
+		{
+			head= newnode;
+			newnode.next = tail;
+		}
+		else 
+		{
+			newnode.next = head.next;
+			head.next = newnode;
+		}
+	}
+	public void display()
+	{
+		if(isEmpty())
+			System.out.println("List is empty");
+		
+			Node trav =head;
+		while(trav!=tail)
+		{
+			System.out.println(" "+trav.data);
+			trav = trav.next;
+		}
+		System.out.println("");
+	}
+	//addFirst(), addLast(), delFirst(), delLast, display()
+
+}

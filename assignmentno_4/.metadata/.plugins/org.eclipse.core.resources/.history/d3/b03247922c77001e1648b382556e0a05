@@ -1,0 +1,10 @@
+package com.sunbeam;
+
+public class program02 {
+
+	public static void main(String[] args) {
+		CircularLink cr = new CircularLink();
+
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.sunbeam;
+
+public class CircularLink {
+
+	 public class Node{
+		 private char ch;
+		 private Node next;
+		 public Node(char data)
+		 {
+			 ch= data;
+			 next = null;
+			 
+		 }
+		 private Node tail;
+		
+	}
+}
