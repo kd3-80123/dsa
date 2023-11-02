@@ -1,0 +1,29 @@
+package com.sunbeam;
+
+import java.util.StringTokenizer;
+
+public class PrefixEva {
+	
+	public void preFixEval(String str)
+	{
+		String str1 = "";
+		   for(int i=0;i<str.length();i++)
+		   {
+			   char ch = str.charAt(i);
+			   str1 = ch+str1;
+		   }
+		StringTokenizer ele = new StringTokenizer(str1," ");
+		
+		while(ele.hasMoreTokens())
+		{
+			String s = ele.nextToken();
+			
+		}
+		
+	}
+	public static void main(String[] args) {
+		
+
+	}
+
+}

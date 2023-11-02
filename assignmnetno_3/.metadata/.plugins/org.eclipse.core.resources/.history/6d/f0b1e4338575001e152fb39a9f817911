@@ -1,0 +1,9 @@
+package com.sunbeam;
+
+public class Postfixmultidigit {
+
+	public static void main(String[] args) {
+		
+	}
+
+}

@@ -1,0 +1,17 @@
+package com.sunbeam;
+
+public class Postfixmultidigit {
+	public static void postFixEvaluation(String str)
+	{
+		Stack st = new Stack(10);
+		
+	}
+
+	public static void main(String[] args) {
+		
+		
+		
+		
+	}
+
+}

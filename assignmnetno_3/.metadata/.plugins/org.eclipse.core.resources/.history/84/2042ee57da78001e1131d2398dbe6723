@@ -1,0 +1,6 @@
+package com.sunbeam;
+
+public class Queue {
+	private int SIZE;
+Stack st = new Stack(0);
+}

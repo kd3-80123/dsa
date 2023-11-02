@@ -1,0 +1,62 @@
+package com.sunbeam;
+
+import java.util.StringTokenizer;
+
+public class Postfixmultidigit {
+	public static int calculate(int num1, char opr, int num2)
+	{
+		switch (opr) {
+		case '+': return num1 + num2;
+		case '-': return num1 - num2;	
+		case '*': return num1 * num2;
+		case '/': return num1 / num2;
+		
+		}
+		return 0;
+	}
+	public static void postFixEvaluation(String str)
+	{
+		Stack st = new Stack(10);
+		
+		for(int i=0;i<str.length()-1;i++)
+			
+		{
+			StringTokenizer ele = new StringTokenizer(str," ");
+			
+			while(ele.hasMoreTokens())
+			{
+				
+				
+						
+				{
+					
+				}
+				
+			
+				//st.push(ele - '0');
+			
+			}
+			
+			{
+				int opt2= st.pop();
+				int opt1 = st.pop();
+				int result = calculate(opt1,ele,opt2);
+				st.push(result);
+				
+			}
+			
+		}
+		
+	}
+
+	
+	public static void main(String[] args) {
+		String str= "44 56 * 33 / + 89 + 77 -";
+		
+		postFixEvaluation(str);
+		
+		
+		
+	}
+
+}

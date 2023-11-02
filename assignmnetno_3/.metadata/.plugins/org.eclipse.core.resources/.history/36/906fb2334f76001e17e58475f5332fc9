@@ -1,0 +1,48 @@
+package com.sunbeam;
+
+import java.util.StringTokenizer;
+
+public class Ashish{
+public static int calculate (int op1, int op2, char ele) {
+	switch (ele) {
+		case '+': return op1 + op2;
+		case '-': return op1 - op2;
+		case '*': return op1 * op2;
+		case '/': return op1 / op2;
+		case '%': return op1 % op2;
+		case '$' :return (int)Math.pow(op1, op2);
+	}
+	return 0;
+}
+
+public static boolean isNumber (String str)
+{
+    for (char ch : str.toCharArray())
+    {
+        if (!Character.isDigit(ch))
+        return false;
+    }
+    return true;
+}
+
+public static int postEval(String postfix) {
+	Stack s = new Stack(20);
+	StringTokenizer str= new StringTokenizer(postfix, " ");
+	while (str.hasMoreTokens()) {
+		String string = str.nextToken();
+		if (isNumber(string)) {
+			s.push(Integer.parseInt(string));
+		}
+		else {
+			int op2 = s.pop();
+			int op1 = s.pop();
+			int result = calculate (op1,op2,string.charAt(0));
+			s.push(result);
+		}
+	}
+	if (!s.isEmpty()) {
+		return s.pop();
+	}
+	return 0;
+}
+}

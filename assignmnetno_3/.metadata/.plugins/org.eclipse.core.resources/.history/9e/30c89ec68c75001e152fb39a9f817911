@@ -1,0 +1,29 @@
+package com.sunbeam;
+
+public class Stack {
+	private char arr[];
+	private int top;
+	private final int SIZE;
+	
+	public Stack(int size)
+	{	
+			SIZE = size;
+			arr = new char [SIZE];
+			top = -1;
+		
+	}
+	
+	public void push(char data)
+	{
+		top++;
+		arr[top]=data;
+	}
+	
+	public char pop()
+	{
+		char data = arr[top];
+		top--;
+		return data;
+	}
+
+}
