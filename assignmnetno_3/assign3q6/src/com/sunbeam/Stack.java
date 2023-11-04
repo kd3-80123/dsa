@@ -1,15 +1,17 @@
 package com.sunbeam;
 
 public class Stack {
-	private int arr[];
-	private int top;
+	Queue q1;
+	Queue q2;
+	int count=0;
 	private final int SIZE;
 	
 	public Stack(int size)
 	{	
 			SIZE = size;
-			arr = new int [SIZE];
-			top = -1;
+			q1= new Queue(SIZE);
+			q2= new Queue(SIZE);
+		
 		
 	}
 	
@@ -17,29 +19,39 @@ public class Stack {
 
 	public void push(int data)
 	{
-		top++;
-		arr[top]=data;
+		
+		 q2.push(data);
+
+         while (!q1.isEmpty()) {
+             q2.push(q1.peek());
+             q1.pop();
+         }
+
+         Queue q = q1;
+         q1 = q2;
+         q2 = q;
+        
 	}
 	
-	public int pop()
+	public void pop()
 	{
-		int data = arr[top];
-		top--;
-		return data;
+		 if (q1.isEmpty())
+             return;
+         q1.pop();
 	}
 	public int peek()
 	{
-		return arr[top];
+		return q2.peek();
 	}
 	
 	public boolean isEmpty()
 	{
-		return top==-1;
+		return count ==0;
 	}
 	
 	public boolean isFull()
 	{
-		return top==SIZE-1;
+		return count == SIZE;
 	}
 }
 

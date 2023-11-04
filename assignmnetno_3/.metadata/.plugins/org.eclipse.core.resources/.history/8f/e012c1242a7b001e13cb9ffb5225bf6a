@@ -1,0 +1,55 @@
+package com.sunbeam;
+
+public class Queue {
+	Stack st;
+	Stack st1;
+	private int rear;
+	private int front;
+	private final int SIZE;
+	int count=0;
+	
+	public Queue(int size)
+	{
+		SIZE =size;
+		st = new Stack(size);
+		st1 = new Stack(size);
+		rear = front =-1;
+		
+	}
+	public boolean isEmpty()
+	{
+		return count==0;
+	}
+	public boolean isFull()
+	{
+		return count==SIZE;
+	}
+	
+	public void push(int value)
+	{
+		st.push(value);
+		st1.push(st.pop());
+		
+		count++;
+	}
+	
+	public void pop()
+	{
+		if(isEmpty()) 
+			System.out.println("The list is empty");
+			
+		front = (front + 1)% SIZE;
+	
+		if(front == rear)
+			front = rear =-1;
+		count--;
+		
+			
+	}
+	public int peek()
+	{
+		return arr[(front + 1) % SIZE];
+	}
+	
+
+}

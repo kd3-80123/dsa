@@ -1,0 +1,67 @@
+package com.sunbeam;
+
+import java.util.StringTokenizer;
+
+public class Postfixmultidigit {
+	public static int calculate(int num1, char opr, int num2)
+	{
+		
+		switch (opr) {
+		case '+': return num1 + num2;
+		case '-': return num1 - num2;	
+		case '*': return num1 * num2;
+		case '/': return num1 / num2;
+		case '%': return num1 % num2;
+		case '$' :return (int)Math.pow(num1, num2);
+		
+		}
+		return 0;
+	}
+	
+	public static boolean isNumber(String str)
+	{
+		
+		for (char ch : str.toCharArray()) {
+			if(Character.isDigit(ch))
+				return true; 
+		}
+		return false;
+	}
+	public static int postFixEvaluation(String str)
+	{
+		Stack st = new Stack(100);
+		StringTokenizer ele = new StringTokenizer(str," ");
+		while(ele.hasMoreTokens())
+			{
+				String s = ele.nextToken();
+				if(isNumber(s))
+					st.push(Integer.parseInt(s));
+				else
+				{
+					int opt2= st.pop();
+					int opt1 = st.pop();
+					int result = calculate(opt1, s.charAt(0) , opt2);
+					st.push(result);
+					
+				}
+		
+			}//while loop complete
+		
+		if(!st.isEmpty())
+			return st.pop();
+		return 0;
+	
+	}
+
+	
+	public static void main(String[] args) {
+		String str= "100 200 + 2 / 5 * 7 +";
+		
+		int result= postFixEvaluation(str);
+		System.out.println(result);
+		
+		
+		
+	}
+
+}

@@ -1,0 +1,57 @@
+package com.sunbeam;
+
+public class Stack {
+	Queue q1;
+	Queue q2;
+	int count=0;
+	private final int SIZE;
+	
+	public Stack(int size)
+	{	
+			SIZE = size;
+			q1= new Queue(SIZE);
+			q2= new Queue(SIZE);
+		
+		
+	}
+	
+	
+
+	public void push(int data)
+	{
+		
+		 q2.push(data);
+
+         while (!q1.isEmpty()) {
+             q2.push(q1.peek());
+             q1.pop();
+         }
+
+         Queue q = q1;
+         q1 = q2;
+         q2 = q;
+	}
+	
+	public void pop()
+	{
+		 if (q1.isEmpty())
+             return;
+         q1.pop();;
+	}
+	public int peek()
+	{
+		return q2.peek();
+	}
+	
+	public boolean isEmpty()
+	{
+		return count ==0;
+	}
+	
+	public boolean isFull()
+	{
+		return count == SIZE;
+	}
+}
+
+
