@@ -2,4 +2,6 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="com.sunbeam.List"/>
     <fullyQualifiedTypeName name="com.sunbeam.List.Node"/>
+    <fullyQualifiedTypeName name="com.sunbeam.LinkList"/>
+    <fullyQualifiedTypeName name="com.sunbeam.Queue"/>
 </qualifiedTypeNameHistroy>

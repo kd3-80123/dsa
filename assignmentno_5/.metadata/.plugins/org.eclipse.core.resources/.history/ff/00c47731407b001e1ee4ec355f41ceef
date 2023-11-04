@@ -1,0 +1,11 @@
+package com.sunbeam;
+
+public class Stack {
+	LinkList top;
+	
+	public Stack()
+	{
+		top =null;
+	}
+
+}
