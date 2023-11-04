@@ -1,0 +1,44 @@
+package com.sunbeam;
+
+public class List {
+	class  Node{
+		private int data;
+		private Node next;
+		
+		public Node(int value)
+		{
+		
+			data= value;
+			next=null;
+		}
+	}
+	private Node head;
+	int count=0;
+	
+	public List()
+	{
+		head =null;
+	}
+	
+	public boolean isEmpty()
+	{
+		return head==null;
+	}
+	
+	public int isGreater()
+	{
+		int temp;
+		Node trav = head;
+		for(;trav!=null;)
+		{
+			if(trav.data>trav.next.data)
+			{
+				temp = trav.data;
+			}
+			trav =trav.next;
+		}
+		return 0;
+	}
+
+	
+}

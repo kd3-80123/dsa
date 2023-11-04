@@ -1,0 +1,22 @@
+package com.sunbeam;
+
+public class Program06 {
+	public static void main(String[] args) {
+		
+	
+	LinkListWithTail list= new LinkListWithTail();
+	list.addFirst(10);
+	list.addFirst(30);
+	list.addFirst(50);
+	list.addFirst(40);
+	list.addFirst(80);
+	list.addFirst(60);
+	list.display();
+	list.bubbleSort();
+	list.display();
+	System.out.println("count "+list.getCount());
+	
+	
+	}
+
+}

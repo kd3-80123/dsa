@@ -1,0 +1,22 @@
+package com.sunbeam;
+
+public class Program05 {
+	
+	public static void main(String[] args) {
+		
+		LinkListWithTail list= new LinkListWithTail();
+		list.addFirst(10);
+		list.addFirst(20);
+		list.addFirst(30);
+		list.addFirst(40);
+		list.addFirst(50);
+		list.addFirst(60);
+		list.display();
+		//list.reverseList();
+	//list.addAfterPos(70, 3);
+		list.addBeforePos(80, 7);
+		list.display();
+		
+	}
+
+}

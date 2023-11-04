@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;assign4q7&apos; to &apos;com.sunbeam&apos;&#x0A;- Original project: &apos;assign4q7&apos;&#x0A;- Original element: &apos;assign4q7/src/assign4q7&apos;&#x0A;- Renamed element: &apos;assign4q7/src/com.sunbeam&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;assign4q7&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src&lt;assign4q7" name="com.sunbeam" qualified="false" references="true" stamp="1699013902764" textual="false" version="1.0"/>
+</session>

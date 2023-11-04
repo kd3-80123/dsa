@@ -1,0 +1,18 @@
+package com.sunbeam;
+
+public class Program03 {
+
+	public static void main(String[] args) {
+		List l = new List();
+		l.addFirst(10);
+		l.addFirst(20);
+		l.addFirst(30);
+		l.addFirst(40);
+		l.addFirst(50);
+	//	l.addFirst(60);
+		l.findMiddle();
+		
+
+	}
+
+}

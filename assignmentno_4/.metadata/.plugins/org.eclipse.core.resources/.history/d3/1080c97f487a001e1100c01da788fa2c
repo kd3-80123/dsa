@@ -1,0 +1,67 @@
+package com.sunbeam;
+
+public class List {
+	class  Node{
+		private int data;
+		private Node next;
+		
+		public Node(int value)
+		{
+		
+			data= value;
+			next=null;
+		}
+	}
+	private Node head;
+	int count=0;
+	
+	public List()
+	{
+		head =null;
+	}
+	
+	public boolean isEmpty()
+	{
+		return head==null;
+	}
+	
+	public int isGreater()
+	{
+		int temp=0;
+		Node trav = head;
+		for(;trav!=null;)
+		{
+			if(trav.data>trav.next.data)
+			{
+				temp = trav.data;
+			}
+			trav =trav.next;
+		}
+		return temp;
+	}
+	public void addFirst(int value)
+	{
+		Node nn = new Node(value);
+		if(isEmpty())
+		{
+			head= nn;
+		}
+		else {
+			nn.next=head.next;
+			head= nn;
+		}
+	}
+	public void display() 
+	{
+		if(isEmpty())
+			System.out.println("list is empty");
+		Node trav = head;
+		while(trav!=null)
+		{
+			System.out.println(" "+trav.data);
+			trav =trav.next;
+		}
+	}
+
+	
+}

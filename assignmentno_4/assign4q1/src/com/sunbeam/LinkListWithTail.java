@@ -3,6 +3,7 @@ package com.sunbeam;
 public class LinkListWithTail {
 	public class Node{
 		private int data;
+		
 		private Node next;
 		public Node(int value)
 		{
@@ -23,7 +24,11 @@ public class LinkListWithTail {
 	{
 		return head==null;
 	}
-	
+	public void afterNode(int data,int pos)
+	{
+		Node trav= head;
+		
+	}
 	public void addFirst(int data)
 
 	{
@@ -52,6 +57,7 @@ public class LinkListWithTail {
 		}
 		System.out.println("");
 	}
+	
 	
 	public void addLast(int data)
 	{
