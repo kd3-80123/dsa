@@ -1,0 +1,42 @@
+package com.sunbeam;
+
+public class Queue {
+	private int arr[];
+	private int rear;
+	private int front;
+	private final int SIZE;
+	int count=0;
+	
+	public Queue(int size)
+	{
+		SIZE =size;
+		arr = new int[SIZE];
+		rear = front =-1;
+		
+	}
+	public boolean isEmpty()
+	{
+		return rear==-1;
+	}
+	public boolean isFull()
+	{
+		return rear==front;
+	}
+	
+	public void push(int value)
+	{
+		rear ++;
+		arr[rear]= value;
+		count++;
+	}
+	
+	public int pop()
+	{
+		if(isEmpty())
+			System.out.println("The list is empty");
+		front++;
+		return arr[front];
+		
+	}
+
+}

@@ -4,6 +4,7 @@ public class LinearQueue {
 	private int arr[];
 	private int rear,front;
 	private final int SIZE;
+	int count;
 	
 	public LinearQueue(int size) {
 		this.SIZE=size;

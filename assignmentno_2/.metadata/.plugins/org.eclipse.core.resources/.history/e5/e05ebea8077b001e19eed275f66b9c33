@@ -1,0 +1,7 @@
+package com.sunbeam;
+
+public class Program08 {
+	Queue q = new Queue(10);
+	
+
+}
