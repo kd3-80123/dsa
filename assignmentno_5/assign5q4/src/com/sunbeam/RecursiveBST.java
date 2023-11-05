@@ -1,0 +1,35 @@
+package com.sunbeam;
+
+class Node {
+    int data;
+    Node left;
+    Node right;
+
+    public Node(int data) {
+        this.data = data;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+class BST {
+    Node root;
+
+    public BST() {
+        root = null;
+    }
+
+    public Node insert(Node root, int data) {
+        if (root == null) {
+            root = new Node(data);
+            return root;
+        }
+        if (data < root.data) {
+            root.left = insert(root.left, data);
+        } else if (data > root.data) {
+            root.right = insert(root.right, data);
+        }
+        return root;
+    }
+    
+}
